@@ -6,6 +6,8 @@ import SideBar from "./components/SideBar";
 import MainPage from "./components/MainPage";
 import Greet from "./components/Greet";
 import Person from "./components/Person";
+import LifeCycleA from "./components/LifeCycleA";
+import LifeCycleC from "./components/LifeCycleC";
 class App extends React.Component {
   state = {
     firstName: "",
@@ -25,7 +27,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <form action="" onSubmit={this.handleSubmit}>
+        <LifeCycleA></LifeCycleA>
+        <LifeCycleC></LifeCycleC>
+        {/* <form action="" onSubmit={this.handleSubmit}>
           <label htmlFor="">FirstName</label>
           <br />
           <input
@@ -46,7 +50,7 @@ class App extends React.Component {
           />
           <br />
           <button type="submit">Submit</button>
-        </form>
+        </form> */}
         {/* {this.state.data.map((person) => {
           return (
             <Person
