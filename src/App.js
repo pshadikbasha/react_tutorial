@@ -8,26 +8,54 @@ import Greet from "./components/Greet";
 import Person from "./components/Person";
 class App extends React.Component {
   state = {
-    data: [
-      { id: 1, name: "shadik", position: "developer" },
-      {
-        id: 2,
-        name: "koushik",
-        position: "Accenture",
-      },
-      {
-        id: 3,
-        name: "kalyan",
-        position: "Cognizant",
-      },
-    ],
+    firstName: "",
+    lastName: "",
+  };
+  handleFirstNamechange = (e) => {
+    this.setState({ firstName: e.target.value });
+  };
+  handleLastNameChange = (e) => {
+    this.setState({ lastName: e.target.value });
+  };
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("the_values_in_form_=>", this.state);
+    alert("the_form_values" + this.state.firstName);
   };
   render() {
     return (
       <div>
-        {this.state.data.map((person) => {
-          return <Person name={person.name} position={person.position} />;
-        })}
+        <form action="" onSubmit={this.handleSubmit}>
+          <label htmlFor="">FirstName</label>
+          <br />
+          <input
+            type="text"
+            name=""
+            id=""
+            value={this.state.firstName}
+            onChange={this.handleFirstNamechange}
+          />
+          <br />
+          <label htmlFor="">LastName</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            value={this.state.lastName}
+            onChange={this.handleLastNameChange}
+          />
+          <br />
+          <button type="submit">Submit</button>
+        </form>
+        {/* {this.state.data.map((person) => {
+          return (
+            <Person
+              key={person.id}
+              name={person.name}
+              position={person.position}
+            />
+          );
+        })} */}
         {/* <Greet></Greet> */}
         {/* <Header></Header>
         <SideBar />
