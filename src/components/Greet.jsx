@@ -25,6 +25,9 @@ class Greet extends React.Component {
       counter: prevCount.counter + 1,
     }));
   };
+  handleClick = () => {
+    console.log("htllo whadik");
+  };
   render() {
     return (
       <div>
@@ -32,6 +35,7 @@ class Greet extends React.Component {
         <button onClick={this.handleChange}>Click Me</button>
         <h3>Counter= {this.state.counter}</h3>
         <button onClick={this.handleCounter}>Click Me</button>
+        <button onClick={this.handleClick}>Click Me</button>
       </div>
     );
   }
