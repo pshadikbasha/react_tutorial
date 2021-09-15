@@ -12,6 +12,7 @@ class Greet extends React.Component {
     super();
     this.state = {
       name: "shadk",
+      isLoggedIn: false,
     };
   }
   handleNameChange = (data) => {
@@ -25,7 +26,11 @@ class Greet extends React.Component {
   render() {
     return (
       <div>
-        <Child handleClick={this.handleClick}></Child>
+        {this.state.isLoggedIn ? (
+          <Child handleClick={this.handleClick}></Child>
+        ) : (
+          "null"
+        )}
       </div>
     );
   }
