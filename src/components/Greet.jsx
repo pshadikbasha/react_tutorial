@@ -6,6 +6,7 @@
 //   );
 // };
 import React from "react";
+import Child from "./Child";
 class Greet extends React.Component {
   constructor() {
     super();
@@ -18,11 +19,13 @@ class Greet extends React.Component {
       name: data,
     });
   };
+  handleClick = () => {
+    alert("hell shadik");
+  };
   render() {
     return (
       <div>
-        <h2>{this.state.name}</h2>
-        <button onClick={() => this.handleNameChange("basha")}>Click me</button>
+        <Child handleClick={this.handleClick}></Child>
       </div>
     );
   }
