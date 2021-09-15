@@ -10,32 +10,19 @@ class Greet extends React.Component {
   constructor() {
     super();
     this.state = {
-      name: "shadik",
-      counter: 0,
+      name: "shadk",
     };
   }
-  handleChange = () => {
+  handleNameChange = (data) => {
     this.setState({
-      name: "basha",
+      name: data,
     });
-  };
-  handleCounter = () => {
-    console.log("hello wolrd");
-    this.setState((prevCount) => ({
-      counter: prevCount.counter + 1,
-    }));
-  };
-  handleClick = () => {
-    console.log("htllo whadik");
   };
   render() {
     return (
       <div>
-        <h2>Welcome {this.state.name}</h2>
-        <button onClick={this.handleChange}>Click Me</button>
-        <h3>Counter= {this.state.counter}</h3>
-        <button onClick={this.handleCounter}>Click Me</button>
-        <button onClick={this.handleClick}>Click Me</button>
+        <h2>{this.state.name}</h2>
+        <button onClick={() => this.handleNameChange("basha")}>Click me</button>
       </div>
     );
   }
