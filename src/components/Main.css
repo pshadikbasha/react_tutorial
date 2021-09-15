@@ -1,0 +1,8 @@
+.Main {
+  width: 63%;
+  background-color: blue;
+  text-align: center;
+  float: right;
+  height: 650px;
+  border: 5px solid white;
+}
