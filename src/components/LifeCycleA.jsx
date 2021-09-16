@@ -13,6 +13,7 @@ class LifeCycleA extends React.Component {
     console.log("LifeCycleA_getDerivedStateFromProps");
     return null;
   }
+
   componentDidMount() {
     console.log("LifeCycleA ComponentDidMount");
   }
@@ -20,7 +21,17 @@ class LifeCycleA extends React.Component {
     console.log("LifeCycleARenderMethod");
     return (
       <div>
-        <LifeCycleB></LifeCycleB>
+        {/* <LifeCycleB></LifeCycleB> */}
+        <h2>Count:{this.state.count}</h2>
+        <button
+          onClick={() =>
+            this.setState((prevState) => ({
+              count: prevState.count + 1,
+            }))
+          }
+        >
+          Click Me
+        </button>
       </div>
     );
   }

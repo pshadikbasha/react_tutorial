@@ -8,12 +8,13 @@
 import React from "react";
 import Child from "./Child";
 class Greet extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       name: "shadk",
       isLoggedIn: false,
     };
+    console.log("the vlauels", this.props);
   }
   handleNameChange = (data) => {
     this.setState({
@@ -26,11 +27,7 @@ class Greet extends React.Component {
   render() {
     return (
       <div>
-        {this.state.isLoggedIn ? (
-          <Child handleClick={this.handleClick}></Child>
-        ) : (
-          "null"
-        )}
+        <h2>hello </h2>
       </div>
     );
   }

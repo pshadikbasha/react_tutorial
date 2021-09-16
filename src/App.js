@@ -27,8 +27,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <LifeCycleA></LifeCycleA>
-        <LifeCycleC></LifeCycleC>
+        {/* <LifeCycleA></LifeCycleA> */}
+        <Greet value></Greet>
+        {/* <LifeCycleC></LifeCycleC> */}
         {/* <form action="" onSubmit={this.handleSubmit}>
           <label htmlFor="">FirstName</label>
           <br />

@@ -1,0 +1,4 @@
+Redux is a predictable state container for javascript apps.
+A state container
+For javascript apps
+For predictable state 
