@@ -1,14 +1,14 @@
-import { BUY_ICE_CREAM } from "./ActionTypes";
-const initialState = {
-  numberOfIceCream: 20,
-};
+import { BUY_ICE_CREAM } from "./ActoinTypes";
 
+const initialState = {
+  noOfIceCreams: 33,
+};
 const IceCreamReducer = (state = initialState, action) => {
   switch (action.type) {
     case BUY_ICE_CREAM:
       return {
         ...state,
-        numberOfIceCream: state.numberOfIceCream - 1,
+        noOfIceCreams: state.noOfIceCreams + 1,
       };
     default:
       return {

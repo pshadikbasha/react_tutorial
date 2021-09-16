@@ -3,26 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import store from "../src/redux/Store";
-import { buyCake, buyIceCream } from "./redux/Action";
-import { fetchUsers } from "../src/redux/Action";
-// console.log("the_intial_state_is", store.getState());
-// const unsubscribe = store.subscribe(() =>
-//   console.log("the_updated_state_is", store.getState())
-// );
-store.dispatch(buyCake());
-store.dispatch(buyCake());
-store.dispatch(buyCake());
-store.dispatch(buyIceCream());
-store.dispatch(buyIceCream());
-store.dispatch(buyIceCream());
-store.dispatch(buyIceCream());
-store.dispatch(fetchUsers);
+import store from "./redux/store";
 
+import { Provider } from "react-redux";
+console.log("the_store_value_is", store.getState());
 // unsubscribe();
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
