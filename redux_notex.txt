@@ -2,3 +2,9 @@ Redux is a predictable state container for javascript apps.
 A state container
 For javascript apps
 For predictable state 
+
+npm start:-> package.json -> scripts start -> index.html-> index.js
+
+ReactJs we can create two types of components
+1. Class Component
+2. Function Component

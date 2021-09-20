@@ -10,14 +10,19 @@ import LifeCycleA from "./components/LifeCycleA";
 import LifeCycleC from "./components/LifeCycleC";
 import CakeContainer from "./components/CakeContainer";
 import IceCream from "./components/IceCreamContainer";
-import Counter from "./components/Counter.jsx";
+// import Counter from "./components/Counter.jsx";
+import Counter from "./components/HooksComponents/Counter";
+import Card from "./UiBrains/components/Card";
 class App extends React.Component {
   render() {
     return (
       <div>
-        <CakeContainer></CakeContainer>
+        {/* <CakeContainer></CakeContainer>
         <IceCream></IceCream>
-        <Counter></Counter>
+        <Counter></Counter> */}
+        {/* <Counter></Counter> */}
+        <Card></Card>
+        <Card></Card>
       </div>
     );
   }
