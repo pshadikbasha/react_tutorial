@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
-
+import "mdbootstrap/css/bootstrap.css";
+import "mdbootstrap/css/mdb.css";
 import { Provider } from "react-redux";
 console.log("the_store_value_is", store.getState());
 // unsubscribe();

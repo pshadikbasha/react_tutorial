@@ -22,7 +22,7 @@ class App extends React.Component {
         <Counter></Counter> */}
         {/* <Counter></Counter> */}
         <Card></Card>
-        <Card></Card>
+        {/* <Card></Card> */}
       </div>
     );
   }
