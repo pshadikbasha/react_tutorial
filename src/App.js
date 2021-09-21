@@ -13,15 +13,19 @@ import IceCream from "./components/IceCreamContainer";
 // import Counter from "./components/Counter.jsx";
 import Counter from "./components/HooksComponents/Counter";
 import Card from "./UiBrains/components/Card";
+import Navbar from "./UiBrains/components/Navbar/Navbar";
+import LandingPage from "./UiBrains/components/LandingPage/LandingPage";
 class App extends React.Component {
   render() {
     return (
       <div>
+        <Navbar></Navbar>
+        <LandingPage></LandingPage>
         {/* <CakeContainer></CakeContainer>
         <IceCream></IceCream>
         <Counter></Counter> */}
         {/* <Counter></Counter> */}
-        <Card></Card>
+        {/* <Card></Card> */}
         {/* <Card></Card> */}
       </div>
     );
