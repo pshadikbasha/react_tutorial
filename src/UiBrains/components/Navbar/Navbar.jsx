@@ -6,7 +6,7 @@ class Navbar extends React.Component {
       <Fragment>
         <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
           <a href="/" className="navbar-brand">
-            Vacation
+            Props And State
           </a>
         </nav>
       </Fragment>

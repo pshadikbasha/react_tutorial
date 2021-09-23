@@ -16,17 +16,35 @@ import Card from "./UiBrains/components/Card";
 import Navbar from "./UiBrains/components/Navbar/Navbar";
 import LandingPage from "./UiBrains/components/LandingPage/LandingPage";
 class App extends React.Component {
+  state = {
+    message: "Hello",
+  };
+  sayGoodMorning = (value) => {
+    this.setState({
+      message: value,
+    });
+  };
+  sayGoodAfternoon = () => {
+    this.setState({
+      message: "Hello GoodAfternoon",
+    });
+  };
+  sayGoodEvening = () => {
+    this.setState({
+      message: "Hello GoodEvening",
+    });
+  };
   render() {
     return (
       <div>
         <Navbar></Navbar>
-        <LandingPage></LandingPage>
-        {/* <CakeContainer></CakeContainer>
-        <IceCream></IceCream>
-        <Counter></Counter> */}
-        {/* <Counter></Counter> */}
-        {/* <Card></Card> */}
-        {/* <Card></Card> */}
+        <h3>{this.state.message}</h3>
+        <button onClick={() => this.sayGoodMorning("goood morning")}>
+          Good Morning
+        </button>
+        <button onClick={this.sayGoodAfternoon}>Good Afternoon</button>
+        <button onClick={this.sayGoodEvening}>Good Evening</button>
+        <Card name="sadhik" />
       </div>
     );
   }
